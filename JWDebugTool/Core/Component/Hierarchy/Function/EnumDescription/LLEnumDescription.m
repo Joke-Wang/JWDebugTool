@@ -589,6 +589,10 @@
             return @"Dismiss on drag";
         case UIScrollViewKeyboardDismissModeInteractive:
             return @"Dismiss interactively";
+        case UIScrollViewKeyboardDismissModeOnDragWithAccessory:
+            return @"Dismiss on drag with accessor";
+        case UIScrollViewKeyboardDismissModeInteractiveWithAccessory:
+            return @"Dismiss interactively with accessory";
     }
     return nil;
 }
