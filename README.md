@@ -22,7 +22,7 @@ pod 'JWDebugTool'
 
 ## Author
 
-王章仲, ext.wangzhangzhong1@jd.com
+Joke-Wang, wangzhangzhong1102@163.com
 
 ## License
 
