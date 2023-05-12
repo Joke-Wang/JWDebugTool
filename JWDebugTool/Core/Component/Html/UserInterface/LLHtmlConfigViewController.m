@@ -81,7 +81,7 @@
     
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    if (cls != [UIWebView class] && cls != [WKWebView class]) {
+    if (cls != [WKWebView class]) {
 #pragma clang diagnostic pop
         if ([LLConfig shared].htmlViewControllerProvider != nil) {
             UIViewController *customViewController = [LLConfig shared].htmlViewControllerProvider(urlString);
@@ -146,10 +146,6 @@
 - (void)showWebViewClassAlert {
     __block NSMutableArray *actions = [[NSMutableArray alloc] init];
     [actions addObject:NSStringFromClass([WKWebView class])];
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    [actions addObject:NSStringFromClass([UIWebView class])];
-#pragma clang diagnostic pop
     if ([LLConfig shared].htmlViewControllerProvider != nil) {
         UIViewController *vc = [LLConfig shared].htmlViewControllerProvider(nil);
         if (vc) {
